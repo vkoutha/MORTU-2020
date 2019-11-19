@@ -8,19 +8,12 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import frc.robot.control.Opeartor;
-import frc.robot.hardware.IO;
-import frc.robot.subsystems.Drivetrain;
 
 public class Robot extends TimedRobot {
-
-    public static Drivetrain drivetrain;
-
+    
     @Override
     public void robotInit() {
-        IO.init();
-        drivetrain = new Drivetrain();
-        Opeartor.init();
+
     }
 
     @Override
