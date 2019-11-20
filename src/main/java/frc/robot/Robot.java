@@ -8,12 +8,19 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.control.Operator;
+import frc.robot.hardware.IO;
+import frc.robot.subsystems.Drivetrain;
 
 public class Robot extends TimedRobot {
-    
+
+    public static Drivetrain drivetrain;
     @Override
     public void robotInit() {
-
+        IO.init();
+        drivetrain = new Drivetrain();
+        Operator.init();
     }
 
     @Override
@@ -45,7 +52,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopPeriodic() {
-
+        CommandScheduler.getInstance().run();
     }
 
     @Override
