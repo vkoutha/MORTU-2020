@@ -1,12 +1,18 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import frc.robot.control.Operator;
+import frc.robot.hardware.IO;
+import frc.robot.subsystems.Flywheel;
 
 public class Robot extends TimedRobot {
 
+    public static Flywheel flywheel;
     @Override
     public void robotInit() {
-      
+        IO.init();
+        flywheel = new Flywheel();
+        Operator.init();
     }
 
     @Override
