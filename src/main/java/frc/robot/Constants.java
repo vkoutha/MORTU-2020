@@ -2,10 +2,21 @@ package frc.robot;
 
 public interface Constants {
 
+    int LEFT_SPARK_MASTER_PORT = 2;
+    int LEFT_SPARK_FOLLOWER_PORT = 3;
+    int RIGHT_SPARK_MASTER_PORT = 4;
+    int RIGHT_SPARK_FOLLOWER_PORT = 5;
     int MASTER_FLYWHEEL_TALON_PORT = 0;
     int FOLLOWER_FLYWHEEL_TALON_PORT = 1;
     int OPERATOR_JOYSTICK_PORT = 0;
     int FLYWHEEL_BUTTON_PORT = 5;
     double FLYWHEEL_SPEED = 0.5;
+
+    int PCM_PORT = 20;
+    int CLAW_OPENER_REVERSE_CHANNEL = 6;
+    int CLAW_OPENER_FORWARD_CHANNEL = 7;
+
+    int OPEN_CLAW_BUTTON_PORT = 3;
+    int CLOSE_CLAW_BUTTON_PORT = 4;
 
 }
